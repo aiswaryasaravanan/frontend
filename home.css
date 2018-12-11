@@ -1,0 +1,19 @@
+.titleBar{
+    height: 11%;
+    background-color:hsl(17, 100%, 50%);
+}
+.menuBar{
+    height: 6%;
+    background-color: rgb(58, 56, 54);
+}
+.menuButton{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    font-size: 20px;
+    padding: 4px;
+    color: aliceblue;
+}
+.menuButton:hover{
+    color: hsl(17, 100%, 50%);
+}
