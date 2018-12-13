@@ -2,6 +2,10 @@
     <head>
         <title>home</title>
         <link rel="stylesheet" type="text/css" href="home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     </head>
     <body>
         <div class="titleBar">
@@ -10,13 +14,12 @@
         <div class="menuBar">
             <button class="menuButton">KM/VM</button>
             <button class="menuButton">History</button>
-            <button class="menuButton">Query</button>
         </div>
-        <table>
+        <!-- <table>
             <tr>
-                <td>
+                <td> -->
                     <div class="sideBar">
-                        <button class="sideButton">K</button><br>
+                        <button class="sideButton" id="k">K</button><br>
                         <button class="sideButton">KK</button><br>
                         <button class="sideButton">BK</button>
                         <button class="sideButton">M</button>
@@ -29,22 +32,85 @@
                         <button class="sideButton">N</button>
                         <button class="sideButton">B</button>
                     </div>
-                </td>
-                <td class="secCol">
+                <!-- </td>
+                <td class="secCol"> -->
                         <div class="catHead">
-                            <label>K:</label>
-                            <label>Total Items:</label>
-                            <label>123</label>
-                            <label>Total Weight:</label>
-                            <label>180g</label>
+                            <label class="catHeadHead">Category:</label>
+                            <label class="catHeadBody">K</label>
+                            <label class="catHeadHead">Total Items:</label>
+                            <label class="catHeadBody">123</label>
+                            <label class="catHeadHead">Total Weight:</label>
+                            <label class="catHeadBody">180g</label>
                         </div>
-                        <div>
+                        <div class="catEdit">
+                            <form>
+                                <input class="catEditText" type="text" placeholder="No"/>
+                                <input class="catEditText" type="text" placeholder="weight"/>
+                                <input class="catEditBut" type="submit" name="KM" value="KM"/>
+                                <input class="catEditBut" type="submit" name="VM" value="VM"/>
+                                <input class="catEditBut" type="submit" name="check" value="check"/>
+                            </form>
+                        </div>
+                        <div class="catTab">
+                            <table class="catTable">
+                                <tr>
+                                    <th>Item No</th>
+                                    <th>Weight</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>0.123</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2.73</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>5.3</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2.3</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6.23</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>0.123</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>0.87</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>3.23</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>5.23</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>5.213</td>
+                                </tr>
 
+                            </table>
                         </div>
-                </td>
+                <!-- </td>
             </tr>
-        </table>
-        
+        </table> -->
+        <script>
+            // $(document).ready(function(){
+                $(".sideButton").click(function(){
+                    // e.preventDefault();
+                    $(".catHead").show();
+                });
+            // });
+        </script>
         
     </body>
 </html>
