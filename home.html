@@ -2,130 +2,34 @@
     <head>
         <title>home</title>
         <link rel="stylesheet" type="text/css" href="home.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#history").click(function(){
+                        $(".content").load("history.html");
+                    });
+                    $("#kmvm").click(function(){
+                        $(".content").load("kmvm.html");
+                    });
+                });
+            </script>
         <div class="titleBar">
             <p id="header">Stock Management</p>
         </div>
         <div class="menuBar">
-            <button class="menuButton">KM/VM</button>
-            <button class="menuButton">History</button>
+            <input type="button" class="menuButton" id="kmvm" value="KM/VM" />
+            <input type="button" class="menuButton" id="history" value="History"/>
         </div>
-        <!-- <table>
-            <tr>
-                <td> -->
-                    <div class="sideBar">
-                        <button class="sideButton" id="k">K</button><br>
-                        <button class="sideButton">KK</button><br>
-                        <button class="sideButton">BK</button>
-                        <button class="sideButton">M</button>
-                        <button class="sideButton">R</button>
-                        <button class="sideButton">KR</button>
-                        <button class="sideButton">KDM-Ring</button>
-                        <button class="sideButton">C</button>
-                        <button class="sideButton">T</button>
-                        <button class="sideButton">D</button>
-                        <button class="sideButton">N</button>
-                        <button class="sideButton">B</button>
-                    </div>
-                <!-- </td>
-                <td class="secCol"> -->
-                        <div class="catHead">
-                            <label class="catHeadHead">Category:</label>
-                            <label class="catHeadBody">K</label>
-                            <label class="catHeadHead">Total Items:</label>
-                            <label class="catHeadBody">123</label>
-                            <label class="catHeadHead">Total Weight:</label>
-                            <label class="catHeadBody">180g</label>
-                        </div>
-                        <div class="catEdit">
-                            <form>
-                                <label for="no">Item No:</label><br>
-                                <input class="catEditText" id="no" type="text" placeholder="No"/><br><br>
-                                <label for="weight">Weight:</label><br>
-                                <input class="catEditText" id="weight" type="text" placeholder="weight"/><br><br>
-                                <label for="description">Description:</label><br>
-                                <input class="catEditText" id="description" type="text" placeholder="Description"/><br><br>
-                                <input class="catEditBut" type="submit" name="KM" value="KM"/>
-                                <input class="catEditBut" type="submit" name="VM" value="VM"/>
-                                <input class="catEditBut" type="submit" name="check" value="check"/>
-                            </form>
-                        </div>
-                        <div class="catTab">
-                            <table class="catTable">
-                                <tr>
-                                    <th class="c1">Item No</th>
-                                    <th>Weight</th>
-                                    <th>Description</th>
-                                </tr>
-                                <tr>
-                                    <td class="c1">1</td>
-                                    <td>0.123</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">2</td>
-                                    <td>2.73</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">3</td>
-                                    <td>5.3</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">4</td>
-                                    <td>2.3</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">5</td>
-                                    <td>6.23</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">6</td>
-                                    <td>0.123</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">7</td>
-                                    <td>0.87</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">8</td>
-                                    <td>3.23</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">9</td>
-                                    <td>5.23</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td class="c1">10</td>
-                                    <td>5.213</td>
-                                    <td></td>
-                                </tr>
+        <div class="content">
 
-                            </table>
-                        </div>
-                <!-- </td>
-            </tr>
-        </table> -->
-        <script>
-            // $(document).ready(function(){
-                $(".sideButton").click(function(){
-                    // e.preventDefault();
-                    $(".catHead").show();
-                });
-            // });
-        </script>
-        
+        </div>
     </body>
 </html>
