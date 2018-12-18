@@ -15,13 +15,7 @@
             <div class="col-sm-12" style="background-color:darkblue"><pre>
 
             </pre>
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" data-toggle="dropdown" style="float:right;background-color: inherit;color:floralwhite">Profile</button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">View profile</a></li>
-                    <li><a href="#">logout</a></li>
-                </ul>
-            </div>
+            
         </div>
         </div>
         <br><br>
@@ -50,9 +44,9 @@
                                          <div class="dropdown">
                                              <button class="btn dropdown-toggle" data-toggle="dropdown">-choose country-</button>
                                              <ul class="dropdown-menu">
-                                                 <li class="dropdown-item">India</li>
-                                                 <li class="dropdown-item">China</li>
-                                                 <li class="dropdown-item">Singapore</li>
+                                                 <div><li class="dropdown-item" data-toggle="dropdown">India</li></div>
+                                                 <div><li class="dropdown-item" data-toggle="dropdown">China</li></div>
+                                                 <div><li class="dropdown-item" data-toggle="dropdown">Singapore</li></div>
                                              </ul>
                                          </div>
                                      </div>
@@ -64,12 +58,21 @@
                                          <label>Password</label>
                                          <input type="password" class="form-control" id="password"/>
                                      </div>
-                                     <div class="form-group form-radio">
-                                         <label class="form-radio-label">
-                                             <input class="form-radio-input" type="radio">Male
-                                             <input class="form-radio-input" type="radio">Female
-                                         </label>
+                                     <div class="custom-control custom-radio">
+                                         <div class="form-group">
+                                                <input class="custom-control-input" type="radio" id="radioMale" name="gender" checked/>
+                                                <label class="custom-control-label" for="radioMale"> Male</label>
+                                         </div>
+                                            <div class="form-group">
+                                                    <input class="custom-control-input" type="radio" id="radioFemale" name="gender"/>
+                                                    <label class="custom-control-label" for="radioFemale">Female</label>
+                                            </div>
+                                         
                                      </div>
+                                     <!-- <div class="custom-control custom-radio">
+                                            <input class="custom-control-input" type="radio" id="radioFemale"/>
+                                            <label class="custom-control-label" for="radioFemale">Female</label>
+                                        </div> -->
                                      <div class="form-group form-check">
                                          <label class="form-check-label">
                                              <input class="form-check-input" type="checkbox">I'm not a robot
@@ -90,7 +93,7 @@
                                          <input type="password" class="form-control" id="password"/>
                                      </div>
                                      
-                                     <button class="btn btn-primary" type="submit">SignUp</button>
+                                     <button class="btn btn-primary" type="submit">SignIn</button>
                                  </form>
                              </div>
                          </div>
