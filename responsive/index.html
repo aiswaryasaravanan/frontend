@@ -42,11 +42,11 @@
                                      </div>
                                      <div class="form-group">
                                          <div class="dropdown">
-                                             <button class="btn dropdown-toggle" data-toggle="dropdown">-choose country-</button>
+                                             <button class="btn dropdown-toggle" data-toggle="dropdown"><span id="country">-choose country-</span></button>
                                              <ul class="dropdown-menu">
-                                                 <div><li class="dropdown-item" data-toggle="dropdown">India</li></div>
-                                                 <div><li class="dropdown-item" data-toggle="dropdown">China</li></div>
-                                                 <div><li class="dropdown-item" data-toggle="dropdown">Singapore</li></div>
+                                                 <li class="dropdown-item" data-toggle="dropdown">India</li>
+                                                 <li class="dropdown-item" data-toggle="dropdown">China</li>
+                                                 <li class="dropdown-item" data-toggle="dropdown">Singapore</li>
                                              </ul>
                                          </div>
                                      </div>
@@ -101,8 +101,13 @@
                 </div>
                 <div class="col-sm-4"></div>
             </div>
-
-            
+            <script>
+            $(document).ready(function(){
+                $(".dropdown-menu li").click(function(){
+                    $("#country").text($(this).text());
+                });
+            });
+            </script>
            
     </body>
 </html>
