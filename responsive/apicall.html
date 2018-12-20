@@ -17,10 +17,15 @@
                     var $datavar=$('#content');
                     $.ajax({
                         type:'GET',
-                        url:'https://jsonplaceholder.typicode.com/posts',
+                        url:'https://jsonplaceholder.typicode.com/todos',
                         success:function(data){
                             $.each(data,function(i,item){
-                                $datavar.append('<li><b>id</b>:'+item.id+'      <b>title:</b>'+item.title+'</li>')
+                                if (item.completed==true) {
+                                    $datavar.append('<tr><td>'+item.id+'</td><td>'+item.title+'</td><td>Completed</td></tr>');
+                                } else {
+                                    $datavar.append('<tr><td>'+item.id+'</td><td>'+item.title+'</td><td>Pending</td></tr>');
+                                }
+                                
                             })
                         }
                     });
@@ -28,9 +33,17 @@
             </script>
         </head>
         <body>
-            <ul id="content">
-                
-            </ul>
-        </body>
-        </html>
+            <div class="container">
+                    <table id="content" class="table table-striped table-bordered table-hover">
+                            <tr>
+                                <th><b>ID</b></th>
+                                <th><b>TITLE</b></th>
+                                <th><b>STATUS</b></th>
+                            </tr>
+                    </table>
+            </div>
+            
+            
+            </body>
+            </html>
         
